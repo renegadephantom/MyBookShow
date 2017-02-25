@@ -1,0 +1,158 @@
+
+
+
+<!--
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Thriller</a></li>
+      <li><a href="#">Suspense</a></li>
+    </ul>
+  </div>
+
+</div>
+-->
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Genre</h3>
+  </div>
+  <div class="panel-body">
+
+    <a href="#">Action</a>
+    |
+    <a href="#">Science Fiction</a>
+    |
+    <a href="#">Drama</a>
+    |
+    <a href="#">Romance</a>
+    |
+    <a href="#">Thriller</a>
+    |
+    <a href="#">Horror</a>
+    |
+    <a href="#">Suspense</a>
+    |
+    <a href="#">Fantasy</a>
+    |
+    <a href="#">Management</a>
+    |
+    <a href="#">Philosophy</a>
+  </div>
+</div>
+
+
+
+<div class="panel panel-default" ng-init="getBooks()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Action</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div ng-repeat="book in books">
+        <div class="col-mg-6">
+          <div class="col-md-6">
+              <h4>{{book.title}}</h4>
+              <p>{{book.description}}</p>
+              <a class="btn btn-primary" ng-href="#!/books/details/{{book._id}}">View details</a>
+
+          </div>
+          <div class="col-md-6">
+            {{book.title}}
+            <img class="thumbnail" src="{{book.image}}"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recommendations</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      recommendation books here </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Thriller</a></li>
+          <li><a href="#">Suspense</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="border col-lg-9" ng-init="getBooks()">
+    <div class="row">
+      <div ng-repeat="book in books">
+        <div class="col-md-4">
+          <img src="{{book.image}}" height="200" width="100" style="border:5px solid black"/>
+          <h4>{{book.title}}</h4>
+        </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+-->
+
+
+
+
+
+
+<!--
+
+<div class="panel panel-default" ng-init="getBooks()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Latest Books</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div ng-repeat="book in books">
+        <div class="col-lg-6">
+          <div class="col-lg-6">
+            <h4>{{book.title}}</h4>
+            <p>
+              Genre : {{book.genre}}
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="{{book.image}}" />
+
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+</div>
+-->

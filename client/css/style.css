@@ -1,0 +1,22 @@
+img{width:30%;}
+
+.sidebar-nav li {
+    list-style-type: none;
+}
+
+
+#sidebar-wrapper{
+  z-index: 1;
+  position: absolute;
+  width : 200px;
+  overflow-y: hidden;
+  background: #23CE50;
+  border: 2px solid red;
+}
+
+
+#page-content-wrapper{
+  position: absolute;
+  padding-left: 500px;
+  border : 2px solid cyan;
+}
