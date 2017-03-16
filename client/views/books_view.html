@@ -21,51 +21,85 @@
   </div>
   <div class="panel-body">
 
-    <a href="#">Action</a>
+    <a href="#!/books/genre/Action">Action</a>
     |
-    <a href="#">Science Fiction</a>
+    <a href="#!/books/genre/Literature">Literature</a>
     |
-    <a href="#">Drama</a>
+    <a ng-href="#!/books/genre/Fiction">Fiction</a>
     |
-    <a href="#">Romance</a>
+    <a href="#!/books/genre/Romance">Romance</a>
     |
-    <a href="#">Thriller</a>
+    <a href="#!/books/genre/Crime">Crime</a>
     |
-    <a href="#">Horror</a>
+    <a href="#!/books/genre/Mystry">Mystry</a>
     |
-    <a href="#">Suspense</a>
+    <a href="#!/books/genre/Thriller">Thriller</a>
     |
-    <a href="#">Fantasy</a>
+    <a href="#!/books/genre/Horror">Horror</a>
     |
-    <a href="#">Management</a>
+    <a href="#!/books/genre/Science Fiction">Science Fiction</a>
     |
-    <a href="#">Philosophy</a>
+    <a href="#!/books/genre/Spy Thriller">Spy Thriller</a>
+    |
+    <a href="#!/books/genre/Humor">Humor</a>
+    |
+    <a href="#!/books/genre/Business">Business</a>
+    |
+    <a href="#!/books/genre/Fantasy">Fantasy</a>
+    |
+    <a href="#!/books/genre/Management">Management</a>
+    |
+    <a href="#!/books/genre/Philosophy">Philosophy</a>
+
+
+
   </div>
 </div>
 
 
 
-<div class="panel panel-default" ng-init="getBooks()">
+
+<div class="panel panel-default" ng-init="getBooksByGenre(genre)">
   <div class="panel-heading">
-    <h3 class="panel-title">Action</h3>
+    <h3 class="panel-title">{{genre}}</h3>
   </div>
   <div class="panel-body">
     <div class="row">
       <div ng-repeat="book in books">
-        <div class="col-mg-6">
+        <div class="col-md-6">
           <div class="col-md-6">
               <h4>{{book.title}}</h4>
-              <p>{{book.description}}</p>
-              <a class="btn btn-primary" ng-href="#!/books/details/{{book._id}}">View details</a>
+<!--              <p>{{book.description}}</p> -->
+              <div id="para-text">
+                {{book.description}}
+              </div>
+              <p>
+                
+              </p>
+               <a class="btn btn-primary" ng-href="#!/books/details/{{book._id}}">View details</a>
 
           </div>
           <div class="col-md-6">
-            {{book.title}}
+<!--            {{book.title}} -->
             <img class="thumbnail" src="{{book.image}}"/>
           </div>
         </div>
       </div>
     </div>
+
+
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+      </ul>
+    </nav>
+
+
+
   </div>
 </div>
 

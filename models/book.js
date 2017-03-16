@@ -40,6 +40,15 @@ module.exports.getBooks = function(callback, limit){
 
 module.exports.getBookById = function(id, callback){
   Book.findById(id, callback);
+//58a9b0dc77955a739485e3dd
+}
+
+
+module.exports.getBookByGenre = function(genre, callback){
+  console.log('genre  is' + genre);
+  var query = {genre : genre};
+  console.log(query);
+  Book.find(query, callback);
 }
 
 module.exports.addBook = function(book, callback){

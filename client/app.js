@@ -1,8 +1,9 @@
 var myApp = angular.module('myApp',['ngRoute']);
 
+var gGenre = 'Action';
+
 //set up all arputes
 myApp.config(function($routeProvider){
-  console.log('Naveen' + $routeProvider);
   $routeProvider.when('/', {
     controller: 'BooksController',
     templateUrl : 'views/books_view.html'
@@ -12,7 +13,7 @@ myApp.config(function($routeProvider){
     templateUrl : 'views/books_view.html'
   })
   .when('/books/details/:id', {
-      controller: 'BooksController',
+      controller: 'BookDetailsController',
       templateUrl : 'views/book_details_view.html'
     })
   .when('/books/add', {
@@ -22,6 +23,10 @@ myApp.config(function($routeProvider){
   .when('/books/edit/:id', {
     controller: 'BooksController',
     templateUrl : 'views/edit_book.html'
+  })
+  .when('/books/genre/:genre', {
+    controller: 'BooksController',
+    templateUrl : 'views/books_view.html'
   })
   .otherwise({
     redirectTo : '/'

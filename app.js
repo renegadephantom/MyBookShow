@@ -1,11 +1,15 @@
 var express = require('express');
+
+var path = require('path');
+
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 
-app.use(express.static(__dirname+'/client'));
 
+app.use(express.static(__dirname+'/client'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(bodyParser.json());
 
@@ -90,11 +94,25 @@ app.get('/api/books', function(req, res){
   });
 });
 
-app.get('/api/books/:_id', function(req, res){
+app.get('/api/books/id/:_id', function(req, res){
+  console.log('Got 1 getBookByGenre' + req.params._genre);
   Book.getBookById(req.params._id, function(err, book){
     if(err){
       throw err;
     }
+    res.json(book);
+  });
+});
+
+
+app.get('/api/books/genre/:_genre', function(req, res){
+  console.log('Got getBookByGenre' + req.params._genre);
+  Book.getBookByGenre(req.params._genre, function(err, book){
+      console.log('result' + book);
+    if(err){
+      throw err;
+    }
+    console.log('throwing back res');
     res.json(book);
   });
 });

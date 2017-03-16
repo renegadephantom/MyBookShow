@@ -1,5 +1,6 @@
-<a href="#/books">Back</a>
-<div class="panel panel-default" ng-init="getBook()">
+<!--
+<a href="#!/books">Back</a>
+<div class="panel panel-default" ng-init="getBookById()">
   <div class="panel-heading">
     <h3 class="panel-title">{{book.title}}</h3>
   </div>
@@ -16,8 +17,80 @@
               <li class="list-group-item">Pages: {{book.pages}}</li>
             </ul>
 
-        </div> <!-- 8col -->
+        </div>
       </div>
     </div>
   </div>
+</div>
+-->
+
+
+
+
+<!--
+
+
+
+<a href="#!/books">Back</a>
+<div class="panel panel-default" ng-init="getBookById()">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{book.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{book.image}}" />
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <p>{{book.description}}</p>
+            <div class="col-md-12">
+
+              <ul class="list-group>">
+                <li class="list-group-item">Genre: {{book.genre}}</li>
+                <li class="list-group-item">Author: {{book.author}}</li>
+                <li class="list-group-item">Pages: {{book.pages}}</li>
+              </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+-->
+
+
+<a href="#!/books">Back</a>
+<div class="panel panel-default" ng-init="getBookById()">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{book.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{book.image}}" />
+      </div>
+
+
+    <div class="col-md-4">
+      <p>{{book.description}}</p>
+    </div>
+
+    <div class="col-md-4">
+      <ul class="list-group>">
+        <li class="list-group-item">Genre: {{book.genre}}</li>
+        <li class="list-group-item">Author: {{book.author}}</li>
+        <li class="list-group-item">Rating: {{book.rating}}</li>
+        <li class="list-group-item">Pages: {{book.pages}}</li>
+      </ul>
+
+    </div>
+
+
+  </div>
+
+</div>
 </div>
